@@ -1,0 +1,22 @@
+<h1> Edit: </h1>
+<hr />
+
+<%= form_for @address do |f| %>
+
+	<%= f.label :street %>
+	<%= f.text_field :street %>
+
+	<%= f.label :city %>
+	<%= f.text_field :city %>
+
+	<%= f.label :state %>
+	<%= f.text_field :state %>
+
+	<%= f.label :zip %>
+	<%= f.text_field :zip %>
+
+	<%= f.submit %>
+
+<%end%>
+
+<h4><%= link_to "User", user_path(@address.user) %> </h4>

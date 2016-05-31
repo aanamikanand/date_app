@@ -1,0 +1,19 @@
+<h1> Are you intersted in: </h1>
+<hr/>
+
+
+<span>Name:</span>
+<span><%= @interest.name %></span>
+<br/>
+
+<span>Description:</span>
+<span><%= @interest.description %></span>
+<br />
+
+<hr />
+
+<%= link_to 'Edit', edit_user_interest_path(@user, @interest) %>
+
+<%= link_to 'Delete', user_interest_path(@user, @interest), method: :delete, data: {confirm: 'Really delete?'} %>
+
+<%= link_to "#{@user.name} Interests", user_interests_path(@user) %>

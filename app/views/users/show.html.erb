@@ -1,0 +1,27 @@
+<h1>
+	Hi!! This is <%= @user.name %>
+</h1>
+<hr/>
+<h3> Here's My Details: </h3>
+<p> Age: <%= @user.age %> </p>
+<p> Gender: <%= @user.gender %> </p>
+<p> Country: <%= @user.country %> </p>
+<p> Religion: <%= @user.religion %> </p>
+<p> Status: <%= @user.status %> </p>
+<p> Image: <%= @user.image %> </p>
+<%= link_to 'Interests', user_interests_path(@user) %>
+
+<%if @user.address != nil %>
+	<%= link_to 'Show Address', address_path(@user.address) %>
+<%else%>
+	<%= link_to "Add Address", new_address_path(user_id: @user.id) %>
+<%end%>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %>
+<%= link_to 'Delete', user_path(@user), method: :delete %>
+<%= link_to 'All users', users_path %>
+
+
+
+

@@ -1,0 +1,36 @@
+<%= form_for @user do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %> <br /><br />
+
+  <%= f.label :age %>
+  <%= f.select :age, ('18'..'65').to_a %> <br /><br />
+
+  <%= f.label :gender %>
+  <%= f.radio_button :gender, 'male', :checked => true %> Male 
+  <%= f.radio_button :gender, 'female' %> Female <br /><br />
+
+  <%= f.label :email, "Email Address" %>
+  <%= f.text_field :email %> <br /><br />
+
+  <%= f.label :password %>
+  <%= f.password_field :password %> <br /><br />
+
+  <%= f.label :password_confirmation, "Confirm Password" %>
+  <%= f.password_field :password_confirmation %> <br /><br />
+
+  <%= f.label :religion %>
+  <%= f.text_field :religion %> <br /><br />
+
+  <%= f.label :country %>
+  <%= f.text_field :country %> <br /><br />
+
+  <%= f.label :image, "Image" %>
+  <%= f.file_field :image %> <br /><br />
+
+  <%= f.label :status %>
+  <%= f.select :status, [['Single','single'],['Married','married'],['Divorced','divorced']] %> <br /><br />
+
+  <%= f.submit %>
+
+<% end %>
